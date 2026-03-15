@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tirada de Cartas Sagradas | Luz de Axé</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    
+    <script src="https://pl28921986.effectivegatecpm.com/33/96/d4/3396d4ba8c55e1f559b3e387ff9e3e7a.js"></script>
+
+    <style>
+        body { background-color: #050A1F; color: white; font-family: 'Lato', sans-serif; }
+        .font-sacred { font-family: 'Cinzel', serif; }
+        
+        /* Animación de la Carta */
+        .card-inner {
+            transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+        .card-flipped { transform: rotateY(180deg); }
+        .card-front, .card-back {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+        }
+        .card-back { transform: rotateY(180deg); }
+        
+        .gold-border { border: 2px solid #BF953F; box-shadow: 0 0 15px rgba(191, 149, 63, 0.3); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center p-4">
+
+    <header class="text-center my-8">
+        <h1 class="font-sacred text-[#FCF6BA] text-3xl uppercase tracking-tighter">Tarot de los Orixás</h1>
+        <p class="text-xs text-gray-400 mt-2">Elige una carta para revelar tu destino</p>
+    </header>
+
+    <div class="grid grid-cols-1 gap-8 w-full max-w-xs">
+        
+        <div class="relative w-full h-[450px] perspective-1000" onclick="revelarCarta(this)">
+            <div class="card-inner w-full h-full relative" id="carta-deck">
+                
+                <div class="card-front gold-border rounded-3xl bg-[#0A1128] flex flex-col items-center justify-center p-6 text-center">
+                    <div class="w-full h-full border border-[#BF953F]/20 rounded-2xl flex items-center justify-center bg-[#030614]">
+                        <span class="text-6xl">✨</span>
+                    </div>
+                    <p class="mt-4 font-sacred text-[#BF953F] text-sm tracking-widest uppercase">Tocar para revelar</p>
+                </div>
+
+                <div class="card-back gold-border rounded-3xl bg-[#0A1128] p-6 text-center flex flex-col items-center">
+                    <img id="res-img" src="" class="w-full h-56 object-cover rounded-xl mb-4 border border-gold">
+                    <h2 id="res-nombre" class="font-sacred text-[#FCF6BA] text-xl uppercase mb-2"></h2>
+                    <p id="res-mensaje" class="text-sm text-gray-300 italic"></p>
+                    
+                    <a href="https://www.effectivegatecpm.com/hysks57n1q?key=cc089af4a8dac2392a3e8f421d826b05" 
+                       class="mt-6 block w-full bg-[#BF953F] text-black font-black py-3 rounded-full text-[10px] uppercase">
+                        Hablar con un Pae de Santo
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mt-10 w-full max-w-md">
+        <script async="async" data-cfasync="false" src="https://pl28922009.effectivegatecpm.com/6f5b6d43fcd5992d22f3d1214c40d0db/invoke.js"></script>
+        <div id="container-6f5b6d43fcd5992d22f3d1214c40d0db"></div>
+    </div>
+
+    <script>
+        function revelarCarta(container) {
+            const inner = container.querySelector('.card-inner');
+            if (inner.classList.contains('card-flipped')) return;
+
+            // Abrir Smartlink en pestaña nueva al hacer clic
+            window.open('https://www.effectivegatecpm.com/hysks57n1q?key=cc089af4a8dac2392a3e8f421d826b05', '_blank');
+
+            fetch('/api/carta')
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('res-img').src = data.img;
+                    document.getElementById('res-nombre').innerText = data.nombre;
+                    document.getElementById('res-mensaje').innerText = data.mensaje;
+                    
+                    // Ejecutar animación
+                    inner.classList.add('card-flipped');
+                });
+        }
+    </script>
+
+    <script src="https://pl28921994.effectivegatecpm.com/1a/8a/4e/1a8a4efb91cf5819f533fa2c97706910.js"></script>
+
+</body>
+</html>
