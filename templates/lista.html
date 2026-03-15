@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entidades Sagradas | Luz de Axé</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script src="https://pl28921986.effectivegatecpm.com/33/96/d4/3396d4ba8c55e1f559b3e387ff9e3e7a.js"></script>
 
+    <style>
+        body { background-color: #050A1F; font-family: 'Lato', sans-serif; color: #E2E8F0; }
+        .font-sacred { font-family: 'Cinzel', serif; }
+        .gold-gradient { background: linear-gradient(135deg, #BF953F, #FCF6BA, #AA771C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gold-border { border-color: #BF953F; }
+    </style>
+</head>
+<body class="pb-20">
+
+    <header class="pt-10 pb-6 text-center border-b border-[#BF953F]/30 bg-[#030614]">
+        <a href="/">
+            <h1 class="text-3xl font-sacred gold-gradient uppercase tracking-tighter">Luz de Axé</h1>
+        </a>
+        <p class="text-[10px] text-gray-500 tracking-[0.2em] mt-1">SABIDURÍA DE LOS ORIXÁS</p>
+    </header>
+
+    <div class="flex justify-center my-6">
+        <script>
+            atOptions = { 'key' : '1d86bff3f179c4da252a15191eba7ed6', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
+        </script>
+        <script src="https://www.highperformanceformat.com/1d86bff3f179c4da252a15191eba7ed6/invoke.js"></script>
+    </div>
+
+    <main class="max-w-2xl mx-auto px-4">
+        <h2 class="font-sacred text-[#FCF6BA] text-xl mb-6 text-center border-b border-[#BF953F]/10 pb-2">Selecciona una Entidad</h2>
+
+        <div class="grid grid-cols-1 gap-4">
+            {% for id, info in items.items() %}
+                <a href="/historia/{{ id }}" class="group flex items-center bg-[#0A1128] border gold-border/20 rounded-2xl p-4 hover:border-[#BF953F] transition-all shadow-lg active:scale-95">
+                    <div class="w-16 h-16 rounded-full border-2 border-[#BF953F]/50 overflow-hidden flex-shrink-0 bg-black">
+                        <img src="{{ info.img }}" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <span class="text-[9px] text-[#BF953F] uppercase font-bold tracking-widest">{{ info.cat }}</span>
+                        <h3 class="font-sacred text-[#FCF6BA] text-lg leading-tight group-hover:text-white">{{ info.titulo }}</h3>
+                        <p class="text-xs text-gray-400 italic">{{ info.sub }}</p>
+                    </div>
+                    <div class="text-[#BF953F] opacity-30 group-hover:opacity-100 transition-opacity">
+                        <span class="text-2xl">➔</span>
+                    </div>
+                </a>
+
+                {% if loop.index % 3 == 0 %}
+                    <div class="my-6 p-4 bg-[#030614] rounded-2xl border border-gray-800 text-center">
+                        <p class="text-[8px] text-gray-600 mb-2">ESPACIO PATROCINADO</p>
+                        <script async="async" data-cfasync="false" src="https://pl28922009.effectivegatecpm.com/6f5b6d43fcd5992d22f3d1214c40d0db/invoke.js"></script>
+                        <div id="container-6f5b6d43fcd5992d22f3d1214c40d0db"></div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="mt-12 text-center">
+            <p class="text-xs text-gray-500 mb-4 font-bold">¿No encuentras lo que buscas?</p>
+            <a href="https://www.effectivegatecpm.com/hysks57n1q?key=cc089af4a8dac2392a3e8f421d826b05" 
+               class="inline-block bg-[#0A1128] border-2 gold-border text-[#BF953F] px-8 py-3 rounded-full font-bold uppercase text-[10px] tracking-widest hover:bg-[#BF953F] hover:text-black transition-all shadow-[0_0_20px_rgba(191,149,63,0.2)]">
+                Consultar Oráculo Privado
+            </a>
+        </div>
+    </main>
+
+    <script src="https://pl28921994.effectivegatecpm.com/1a/8a/4e/1a8a4efb91cf5819f533fa2c97706910.js"></script>
+
+</body>
+</html>
