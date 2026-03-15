@@ -3,65 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitaciones y Eventos | Luz de Axé</title>
+    <title>Invitaciones a Templos | Luz de Axé</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
     
     <script src="https://pl28921986.effectivegatecpm.com/33/96/d4/3396d4ba8c55e1f559b3e387ff9e3e7a.js"></script>
-
-    <style>
-        body { background-color: #050A1F; color: #E2E8F0; font-family: 'Lato', sans-serif; }
-        .font-sacred { font-family: 'Cinzel', serif; }
-        .gold-border { border-color: #BF953F; }
-        .gold-text { color: #FCF6BA; }
-    </style>
 </head>
-<body class="pb-10">
+<body class="bg-[#050A1F] text-white">
 
-    <header class="p-6 text-center border-b border-[#BF953F]/20 bg-[#030614]">
-        <h1 class="font-sacred text-2xl gold-text uppercase tracking-widest">Eventos de Fe</h1>
-        <p class="text-[10px] text-gray-500 italic">Invitaciones a Templos y Sesiones</p>
+    <header class="p-6 text-center border-b border-[#BF953F]/30 bg-[#030614]">
+        <h1 class="font-['Cinzel'] text-2xl text-[#FCF6BA] uppercase tracking-widest">Invitaciones y Fiestas</h1>
     </header>
 
-    <main class="max-w-md mx-auto p-4 space-y-8 mt-4">
-
+    <main class="max-w-md mx-auto p-4">
+        
         {% for inv in invitaciones %}
-            <div class="bg-[#0A1128] rounded-3xl overflow-hidden border gold-border/20 shadow-2xl">
-                <div class="p-4 border-b border-[#BF953F]/10 flex justify-between items-center">
-                    <span class="font-sacred text-xs gold-text">{{ inv.templo }}</span>
-                    <span class="text-[10px] bg-[#BF953F]/20 text-[#BF953F] px-2 py-1 rounded">NUEVO</span>
-                </div>
-                
-                <img src="{{ inv.img }}" class="w-full h-auto" alt="Invitación Templo">
-
-                <div class="p-4 bg-[#030614] text-center">
-                    <a href="https://www.effectivegatecpm.com/hysks57n1q?key=cc089af4a8dac2392a3e8f421d826b05" 
-                       class="inline-block w-full bg-[#BF953F] text-black font-black py-3 rounded-xl uppercase text-xs tracking-tighter">
-                        📍 Ver Ubicación del Templo
+            <div class="mb-8 group">
+                <div class="bg-[#0A1128] rounded-2xl overflow-hidden border border-[#BF953F]/20 shadow-xl">
+                    <div class="p-3 border-b border-[#BF953F]/10">
+                        <p class="text-[10px] text-[#BF953F] font-bold uppercase tracking-widest">{{ inv.templo }}</p>
+                    </div>
+                    
+                    <a href="https://www.effectivegatecpm.com/hysks57n1q?key=cc089af4a8dac2392a3e8f421d826b05" target="_blank">
+                        <img src="{{ inv.img }}" class="w-full h-auto opacity-90 hover:opacity-100 transition-opacity">
                     </a>
-                </div>
-            </div>
 
-            {% if loop.index % 2 == 0 %}
-                <div class="py-6 border-y border-[#BF953F]/10 bg-[#050A1F]">
-                    <p class="text-[8px] text-center text-gray-600 mb-3 tracking-widest uppercase">Anuncio de la Comunidad</p>
+                    <div class="p-4 bg-[#030614]">
+                        <a href="https://www.effectivegatecpm.com/hysks57n1q?key=cc089af4a8dac2392a3e8f421d826b05" 
+                           class="block w-full bg-gradient-to-r from-[#BF953F] to-[#AA771C] text-black text-center font-black py-3 rounded-lg uppercase text-xs">
+                            Ver Dirección y Horarios
+                        </a>
+                    </div>
+                </div>
+
+                {% if loop.index % 2 == 0 %}
+                <div class="my-8 p-2 bg-black/40 rounded-xl border border-dashed border-gray-700">
+                    <p class="text-[8px] text-center text-gray-500 mb-2 uppercase">Publicidad Patrocinada</p>
                     <script async="async" data-cfasync="false" src="https://pl28922009.effectivegatecpm.com/6f5b6d43fcd5992d22f3d1214c40d0db/invoke.js"></script>
                     <div id="container-6f5b6d43fcd5992d22f3d1214c40d0db"></div>
                 </div>
-            {% endif %}
-
+                {% endif %}
+            </div>
         {% endfor %}
 
     </main>
 
-    <div class="flex justify-center mt-10">
-        <script>
-            atOptions = { 'key' : '1d86bff3f179c4da252a15191eba7ed6', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
-        </script>
-        <script src="https://www.highperformanceformat.com/1d86bff3f179c4da252a15191eba7ed6/invoke.js"></script>
-    </div>
-
     <script src="https://pl28921994.effectivegatecpm.com/1a/8a/4e/1a8a4efb91cf5819f533fa2c97706910.js"></script>
-
 </body>
 </html>
