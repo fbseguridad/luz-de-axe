@@ -117,7 +117,11 @@ data = {
             "resumen": "Quita el mal de ojo y las trabas espirituales.",
             "ritual": "Tierra de cementerio (un poco), sal gruesa y ruda..."
         }
-    }
+    },
+    "invitaciones": [
+        {"templo": "Fiesta de Exu - Templo Las Almas", "img": "https://res.cloudinary.com/dv2316ai5/image/upload/v1710500000/invitacion1.jpg"},
+        {"templo": "Sesión de Caridad - Umbanda Luz", "img": "https://res.cloudinary.com/dv2316ai5/image/upload/v1710500000/invitacion2.jpg"}
+    ]
 }
 
 # --- RUTAS ---
@@ -138,6 +142,10 @@ def lectura(id):
 @app.route('/conjuros')
 def lista_conjuros():
     return render_template('lista_conjuros.html', conjuros=data['conjuros'])
+
+@app.route('/blog-invitaciones')
+def blog():
+    return render_template('blog.html', invitaciones=data['invitaciones'])
 
 @app.route('/oraculo')
 def oraculo():
