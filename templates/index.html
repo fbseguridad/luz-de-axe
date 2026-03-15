@@ -14,11 +14,17 @@
         .font-sacred { font-family: 'Cinzel', serif; }
         .gold-gradient { background: linear-gradient(135deg, #BF953F, #FCF6BA, #AA771C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .gold-border { border-color: #BF953F; }
+        .animate-pulse-gold { animation: pulse-gold 2s infinite; }
+        @keyframes pulse-gold {
+            0% { box-shadow: 0 0 0 0 rgba(191, 149, 63, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(191, 149, 63, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(191, 149, 63, 0); }
+        }
     </style>
 </head>
-<body class="pb-20">
+<body class="pb-32">
 
-    <header class="pt-12 pb-8 text-center border-b border-[#BF953F]/30 relative">
+    <header class="pt-12 pb-8 text-center border-b border-[#BF953F]/30 relative bg-[#030614]">
         <div class="w-24 h-24 mx-auto mb-4 border-2 gold-border rounded-full flex items-center justify-center bg-[#0A1128] shadow-[0_0_30px_rgba(191,149,63,0.3)]">
             <span class="text-3xl">🔱</span>
         </div>
@@ -28,30 +34,57 @@
 
     <main class="max-w-2xl mx-auto p-4 mt-6 space-y-6">
         
-        <a href="/blog-invitaciones" class="block bg-[#0A1128] border-2 border-dashed gold-border/50 rounded-2xl p-4 text-center hover:scale-105 transition-all">
+        <a href="/tarot" class="block bg-[#0A1128] border-2 gold-border rounded-3xl p-6 text-center animate-pulse-gold transition-all">
+            <span class="text-5xl block mb-2">🃏</span>
+            <h2 class="font-sacred text-2xl text-[#FCF6BA] uppercase tracking-tighter">Tirada de Cartas</h2>
+            <p class="text-xs text-gray-400 font-bold mt-1">REVELA TU DESTINO HOY</p>
+        </a>
+
+        <a href="/blog-invitaciones" class="block bg-[#0A1128] border-2 border-dashed gold-border/30 rounded-2xl p-4 text-center hover:scale-[1.02] transition-all">
             <span class="text-2xl">📅</span>
             <h2 class="font-sacred text-xl text-[#FCF6BA]">Blog de Invitaciones</h2>
-            <p class="text-[10px] text-gray-400">Fiestas, Sesiones y Templos</p>
+            <p class="text-[10px] text-gray-400 uppercase tracking-widest">Fiestas y Sesiones</p>
         </a>
 
         <div class="grid grid-cols-2 gap-4">
-            <a href="/historias" class="bg-[#0A1128] border gold-border/30 rounded-2xl p-6 text-center hover:border-[#BF953F] transition-all">
+            <a href="/historias" class="bg-[#0A1128] border gold-border/20 rounded-2xl p-6 text-center hover:border-[#BF953F] transition-all">
                 <span class="text-4xl block mb-2">📜</span>
                 <h2 class="font-sacred text-lg text-[#FCF6BA]">Historias</h2>
             </a>
-            <a href="/puntos-cantados" class="bg-[#0A1128] border gold-border/30 rounded-2xl p-6 text-center hover:border-[#BF953F] transition-all">
-                <span class="text-4xl block mb-2">🥁</span>
-                <h2 class="font-sacred text-lg text-[#FCF6BA]">Puntos</h2>
+            <a href="/conjuros" class="bg-[#0A1128] border gold-border/20 rounded-2xl p-6 text-center hover:border-[#BF953F] transition-all">
+                <span class="text-4xl block mb-2">🔥</span>
+                <h2 class="font-sacred text-lg text-[#FCF6BA]">Conjuros</h2>
             </a>
         </div>
 
-        <a href="https://www.effectivegatecpm.com/hysks57n1q?key=cc089af4a8dac2392a3e8f421d826b05" target="_blank" class="block bg-gradient-to-r from-[#BF953F] to-[#AA771C] p-6 rounded-2xl text-center shadow-xl hover:shadow-[#BF953F]/20 transition-all">
-            <span class="text-4xl block mb-2">🐚</span>
-            <h2 class="font-sacred text-black text-2xl uppercase">Consultar Oráculo</h2>
-            <p class="text-black font-bold text-xs">REVELACIÓN INMEDIATA</p>
+        <a href="/oraculo" class="block bg-gradient-to-b from-[#0A1128] to-[#030614] border gold-border/40 p-8 rounded-3xl text-center shadow-2xl relative overflow-hidden group">
+            <div class="absolute inset-0 bg-[#BF953F]/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <span class="text-5xl block mb-3">🐚</span>
+            <h2 class="font-sacred text-[#FCF6BA] text-2xl uppercase">Consultar Búzios</h2>
+            <p class="text-[#BF953F] font-bold text-[10px] tracking-[0.2em] mt-2">MENSAJE DE LOS ORIXÁS</p>
         </a>
 
+        <div class="py-4">
+            <script async="async" data-cfasync="false" src="https://pl28922009.effectivegatecpm.com/6f5b6d43fcd5992d22f3d1214c40d0db/invoke.js"></script>
+            <div id="container-6f5b6d43fcd5992d22f3d1214c40d0db"></div>
+        </div>
+
     </main>
+
+    <div class="fixed bottom-6 left-0 right-0 px-6 z-50">
+        <a href="https://www.effectivegatecpm.com/hysks57n1q?key=cc089af4a8dac2392a3e8f421d826b05" 
+           target="_blank"
+           class="flex items-center justify-between bg-gradient-to-r from-[#BF953F] to-[#AA771C] p-4 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.5)] active:scale-95 transition-all">
+            <div class="flex items-center">
+                <span class="text-2xl mr-3">🔮</span>
+                <div class="text-left">
+                    <p class="text-black font-black text-[10px] uppercase leading-none">¿Problemas de Amor?</p>
+                    <p class="text-black font-bold text-lg leading-tight">Consulta Privada</p>
+                </div>
+            </div>
+            <span class="bg-black text-[#BF953F] px-3 py-1 rounded-full font-bold text-xs">AQUÍ ➔</span>
+        </a>
+    </div>
 
     <script src="https://pl28921994.effectivegatecpm.com/1a/8a/4e/1a8a4efb91cf5819f533fa2c97706910.js"></script>
 
