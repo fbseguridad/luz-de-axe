@@ -1,58 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/static/css/style.css">
-<title>CréditoMax360 Ultra</title>
-<script>
-let tips=["🎯 Crédito aprobado en minutos","💸 Ofertas únicas según tu perfil","🔥 Préstamos rápidos y confiables","💥 Tu dinero disponible hoy"];
-let tipIndex=0;
-function rotateTips(){
-  const t=document.getElementById('tip');
-  setInterval(()=>{
-    t.innerHTML='<a href="https://propellerads.com" target="_blank">'+tips[tipIndex%tips.length]+'</a>';
-    tipIndex++;
-  },4000);
-}
-
-let popups=["🎉 Crédito visible ahora!","💰 Oferta aprobada!","🔥 Solicita tu préstamo hoy!","💳 Beneficio instantáneo"];
-let popupIndex=0;
-function rotatePopups(){
-  const p=document.getElementById('popup');
-  setInterval(()=>{
-    p.innerText=popups[popupIndex%popups.length];
-    p.style.display='block';
-    setTimeout(()=>{p.style.display='none';},5000);
-    popupIndex++;
-  },7000);
-}
-
-function enableSubmit(){sessionStorage.setItem('shared','true');document.getElementById('submitBtn').disabled=false;alert("Gracias por compartir! Ahora puedes ver las ofertas.");}
-function checkShare(){if(sessionStorage.getItem('shared')==='true'){document.getElementById('submitBtn').disabled=false;} else {document.getElementById('submitBtn').disabled=true;}}
-
-window.onload=function(){rotateTips();rotatePopups();checkShare();};
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luz de Axé | Sabiduría de Umbanda y Kimbanda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <script src="https://pl28895515.effectivegatecpm.com/6e/9f/7c/6e9f7c7b349462b58e80ef37b34985e5.js"></script>
+    
+    <style>
+        body { background-color: #050A1F; font-family: 'Lato', sans-serif; color: #E2E8F0; }
+        .font-sacred { font-family: 'Cinzel', serif; }
+        .gold-gradient { background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gold-border { border-color: #BF953F; }
+        .gold-bg { background: linear-gradient(135deg, #BF953F, #AA771C); }
+    </style>
 </head>
-<body>
-<div class="container">
-<h1>CréditoMax360 Ultra</h1>
-<video autoplay muted loop><source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"></video>
-<p id="tip"></p>
-<form method="POST" action="/offers">
-<input type="text" name="nombre" placeholder="Nombre" required>
-<input type="text" name="apellido" placeholder="Apellido" required>
-<input type="text" name="dni" placeholder="DNI / Cédula" required>
-<input type="email" name="email" placeholder="Email" required>
-<input type="text" name="banco" placeholder="Banco" required>
-<button type="submit" id="submitBtn">Ver ofertas</button>
-</form>
-<p style="margin-top:10px;">Comparte para desbloquear:
-<a href="https://wa.me/?text=Visita%20CréditoMax360" target="_blank" onclick="enableSubmit()">WhatsApp</a> |
-<a href="https://www.facebook.com/sharer/sharer.php?u=https://tusitio.com" target="_blank" onclick="enableSubmit()">Facebook</a> |
-<a href="https://t.me/share/url?url=https://tusitio.com&text=CréditoMax360" target="_blank" onclick="enableSubmit()">Telegram</a>
-</p>
-<div id="popup" class="popup"></div>
-<div class="sidebanner">Publicidad</div>
-</div>
+<body class="pb-20">
+
+    <header class="pt-12 pb-8 px-4 text-center border-b border-[#BF953F]/30 relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-full bg-[#BF953F]/5 blur-[100px] z-0"></div>
+        
+        <div class="relative z-10">
+            <div class="w-24 h-24 mx-auto mb-4 border-2 gold-border rounded-full flex items-center justify-center bg-[#0A1128] shadow-[0_0_30px_rgba(191,149,63,0.3)]">
+                <span class="text-3xl">🔱</span>
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl font-sacred font-black tracking-widest gold-gradient uppercase">Luz de Axé</h1>
+            <p class="mt-3 text-sm tracking-[0.3em] text-[#FCF6BA]/70 uppercase">El Camino de la Luz</p>
+        </div>
+    </header>
+
+    <div class="w-full bg-[#030614] py-2 border-b border-[#BF953F]/10 flex justify-center">
+        <div class="text-[10px] text-gray-600 tracking-widest">ESPACIO PATROCINADO</div>
+    </div>
+
+    <main class="max-w-2xl mx-auto p-4 mt-8 space-y-6">
+        
+        <div class="grid grid-cols-2 gap-4">
+            <a href="/historias-orixas" class="group relative overflow-hidden rounded-2xl border gold-border/30 bg-[#0A1128] hover:border-[#BF953F] transition-all duration-500 shadow-lg block aspect-square">
+                <img src="https://i.imgur.com/vH1N5qj.jpeg" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-all duration-700 group-hover:scale-110" alt="Orixas">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#050A1F] via-[#050A1F]/80 to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4 text-center">
+                    <h2 class="font-sacred text-xl text-[#FCF6BA] mb-1">Historias Sagradas</h2>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest">Orixás y Entidades</p>
+                </div>
+            </a>
+
+            <a href="/puntos-cantados" class="group relative overflow-hidden rounded-2xl border gold-border/30 bg-[#0A1128] hover:border-[#BF953F] transition-all duration-500 shadow-lg block aspect-square">
+                <div class="absolute inset-0 bg-[#0A1128] opacity-50"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#050A1F] via-[#050A1F]/80 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="text-5xl opacity-80 group-hover:scale-110 transition-transform">🥁</span>
+                </div>
+                <div class="absolute bottom-4 left-4 right-4 text-center">
+                    <h2 class="font-sacred text-xl text-[#FCF6BA] mb-1">Puntos Cantados</h2>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest">Audios y Letras</p>
+                </div>
+            </a>
+        </div>
+
+        <a href="/oraculo" class="block w-full gold-bg p-[1px] rounded-2xl shadow-[0_0_20px_rgba(191,149,63,0.2)] hover:shadow-[0_0_40px_rgba(191,149,63,0.4)] transition-all">
+            <div class="bg-[#0A1128] rounded-2xl p-6 text-center h-full relative overflow-hidden">
+                <div class="relative z-10">
+                    <span class="text-4xl block mb-3">🐚</span>
+                    <h2 class="font-sacred text-2xl text-[#FCF6BA] mb-2 uppercase">Oráculo de Buzios</h2>
+                    <p class="text-sm text-gray-300 mb-4">Recibe el consejo de las entidades para tu día.</p>
+                    <span class="inline-block px-8 py-3 gold-bg text-black font-black uppercase text-xs tracking-widest rounded-full">Consultar Ahora</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="/hechizos" class="block w-full border gold-border/30 rounded-2xl p-6 bg-[#0A1128]/80 hover:bg-[#0A1128] transition-all text-center">
+            <span class="text-3xl block mb-2">🕯️</span>
+            <h2 class="font-sacred text-xl text-[#FCF6BA] mb-1 uppercase">Rituales y Firmas</h2>
+            <p class="text-xs text-gray-400">Apertura de caminos, limpiezas y protecciones.</p>
+        </a>
+
+    </main>
+
+    <footer class="mt-12 py-8 text-center border-t border-[#BF953F]/10">
+        <p class="font-sacred text-[#BF953F] text-xl mb-2">LUZ DE AXÉ</p>
+        <p class="text-[10px] text-gray-500 uppercase tracking-widest">Pai Joao Luz © 2026</p>
+    </footer>
+
 </body>
 </html>
