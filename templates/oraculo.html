@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oráculo de Búzios | Luz de Axé</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    
+    <script src="https://pl28921986.effectivegatecpm.com/33/96/d4/3396d4ba8c55e1f559b3e387ff9e3e7a.js"></script>
+
+    <style>
+        body { background-color: #050A1F; color: #E2E8F0; font-family: 'Lato', sans-serif; overflow-x: hidden; }
+        .font-sacred { font-family: 'Cinzel', serif; }
+        .gold-glow { box-shadow: 0 0 15px rgba(191, 149, 63, 0.4); }
+        .buzios-container { perspective: 1000px; }
+        .shake { animation: shake 0.5s infinite; }
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            10% { transform: translate(-1px, -2px) rotate(-1deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            30% { transform: translate(3px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(1deg); }
+            50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4">
+
+    <div class="mb-6">
+        <script>
+            atOptions = { 'key' : '1d86bff3f179c4da252a15191eba7ed6', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
+        </script>
+        <script src="https://www.highperformanceformat.com/1d86bff3f179c4da252a15191eba7ed6/invoke.js"></script>
+    </div>
+
+    <div class="max-w-md w-full bg-[#0A1128] rounded-[40px] p-8 border border-[#BF953F]/30 text-center shadow-2xl relative overflow-hidden">
+        
+        <h1 class="font-sacred text-[#FCF6BA] text-2xl uppercase tracking-widest mb-2">Oráculo Sagrado</h1>
+        <p class="text-xs text-gray-400 mb-8 italic">Concéntrate en tu pregunta y tira los búzios</p>
+
+        <div id="buzios-display" class="mb-10 h-32 flex items-center justify-center space-x-2">
+            <span class="text-4xl opacity-20 rotate-12">🐚</span>
+            <span class="text-5xl opacity-40 -rotate-12">🐚</span>
+            <span class="text-4xl opacity-20 rotate-45">🐚</span>
+        </div>
+
+        <div id="resultado-container" class="hidden mb-8 p-4 bg-[#030614] rounded-2xl border-l-4 border-[#BF953F]">
+            <p id="mensaje-oraculo" class="text-[#FCF6BA] italic text-lg leading-tight"></p>
+        </div>
+
+        <button id="btn-tirar" onclick="tirarBuzios()" class="w-full bg-gradient-to-r from-[#BF953F] to-[#AA771C] text-black font-black py-4 rounded-2xl uppercase tracking-widest text-sm shadow-xl active:scale-95 transition-all">
+            Consultar Búzios
+        </button>
+
+        <div id="ad-oraculo" class="hidden mt-6 pt-4 border-t border-gray-800">
+            <p class="text-[8px] text-gray-600 mb-2 uppercase tracking-widest">Ofrenda Recomendada</p>
+            <script async="async" data-cfasync="false" src="https://pl28922009.effectivegatecpm.com/6f5b6d43fcd5992d22f3d1214c40d0db/invoke.js"></script>
+            <div id="container-6f5b6d43fcd5992d22f3d1214c40d0db"></div>
+        </div>
+
+    </div>
+
+    <a href="/" class="mt-8 text-[#BF953F] text-xs uppercase tracking-widest font-bold">⬅ Volver al Templo</a>
+
+    <script>
+        function tirarBuzios() {
+            const btn = document.getElementById('btn-tirar');
+            const display = document.getElementById('buzios-display');
+            const resContainer = document.getElementById('resultado-container');
+            const mensaje = document.getElementById('mensaje-oraculo');
+            const ad = document.getElementById('ad-oraculo');
+
+            // 1. Animación de carga (Dopamina)
+            btn.disabled = true;
+            btn.innerText = "Consultando...";
+            display.classList.add('shake');
+            
+            // 2. Llamada a tu API en app.py
+            fetch('/api/buzios')
+                .then(response => response.json())
+                .then(data => {
+                    setTimeout(() => {
+                        display.classList.remove('shake');
+                        mensaje.innerText = data.mensaje;
+                        resContainer.classList.remove('hidden');
+                        ad.classList.remove('hidden');
+                        btn.innerText = "Preguntar de nuevo";
+                        btn.disabled = false;
+                        
+                        // DISPARAR SMARTLINK EN SEGUNDO PLANO O POPUP
+                        window.open('https://www.effectivegatecpm.com/hysks57n1q?key=cc089af4a8dac2392a3e8f421d826b05', '_blank');
+                    }, 1500);
+                });
+        }
+    </script>
+
+    <script src="https://pl28921994.effectivegatecpm.com/1a/8a/4e/1a8a4efb91cf5819f533fa2c97706910.js"></script>
+
+</body>
+</html>
