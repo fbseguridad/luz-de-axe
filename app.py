@@ -1,24 +1,26 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request
+import os
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET','POST'])
+# Simulación de base de datos (Luego puedes agregar cientos)
+historias = {
+    "maria-padilha": {"titulo": "Maria Padilha das Almas", "texto": "Historia larga aquí..."},
+    "exu-caveira": {"titulo": "El Misterio de Exu Caveira", "texto": "Historia larga aquí..."}
+}
+
+@app.route('/')
 def index():
-    # Pantalla inicial con formulario
     return render_template('index.html')
 
-@app.route('/offers', methods=['POST'])
-def offers():
-    # Captura los datos del formulario (no se guardan en DB)
-    nombre = request.form.get('nombre')
-    apellido = request.form.get('apellido')
-    dni = request.form.get('dni')
-    email = request.form.get('email')
-    banco = request.form.get('banco')
-    
-    # Redirige a la pantalla de resultados
-    return render_template('results.html', nombre=nombre, apellido=apellido)
+@app.route('/historias')
+def lista_historias():
+    return render_template('lista.html', items=historias)
 
-if __name__ == '__main__':
-    # Flask corriendo en Termux
-    app.run(host='0.0.0.0', port=5000)
+@app.route('/historia/<nombre>')
+def ver_historia(nombre):
+    datos = historias.get(nombre)
+    return render_template('lectura.html', datos=datos)
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 10000)))
